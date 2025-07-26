@@ -1,0 +1,36 @@
+html, body {
+  background: #000;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+#screen {
+  position: relative;
+}
+#screen::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-image: linear-gradient(to bottom, #fff, #fff 33%, #000 66%, #000);
+  opacity: 0.1;
+  background-size: 100% 0.3472%;
+}
+#screen canvas {
+  box-sizing: border-box;
+  display: block;
+  width: auto !important;
+  max-width: 100%;
+  height: 100vh !important;
+  aspect-ratio: 608/480;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0;
+  pointer-events: none;
+  padding: 2%;
+  background-color: #000;
+}
